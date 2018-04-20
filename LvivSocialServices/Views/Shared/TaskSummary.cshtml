@@ -1,0 +1,18 @@
+﻿@model LvivSocialServices.Models.Task
+
+<div class="card card-outline-primary m-1 p-1">
+    <div class="bg-faded p-1">
+        <h4>
+            @Model.Category
+            <span class="badge badge-pill badge-primary" style="float:right">
+                <small>
+                    @Model.CreationDateTime
+                </small>
+            </span>
+        </h4>
+    </div>
+    <div class="card-text p-1">@Model.Description </div>
+    <div class="card-text p-1">@Model.PersonInfo.FirstName</div>
+    <div class="card-text p-1">@Model.PersonInfo.LastName</div>
+    <div class="card-text p-1">@Model.PersonInfo.Address</div>
+</div>
