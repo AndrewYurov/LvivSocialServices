@@ -6,6 +6,7 @@ namespace LvivSocialServices.Models
     public class TaskBag
     {
         private List<Task> taskCollection = new List<Task>();
+
         public virtual void AddItem(Task task)
         {
             taskCollection.Add(task);

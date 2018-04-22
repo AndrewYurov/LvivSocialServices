@@ -1,5 +1,6 @@
 ﻿@model LvivSocialServices.Models.Task
 
+
 <div class="card card-outline-primary m-1 p-1">
     <div class="bg-faded p-1">
         <h4>
@@ -11,6 +12,19 @@
             </span>
         </h4>
     </div>
+    <form id="@Model.TaskID" asp-action="AddToTaskBag"
+          asp-controller="TaskBag" method="post">
+        <input type="hidden" asp-for="TaskID" />
+        <input type="hidden" name="returnUrl" 
+               value="@ViewContext.HttpContext.Request.PathAndQuery()"/>
+        <span class="card-text p-1">
+            @Model.Description
+            <button type="submit"
+                    class="btn btn-success btn-sm pull-right" style="float:right">
+                Add To Task Bag
+            </button>
+        </span>
+    </form>
     <div class="card-text p-1">@Model.Description </div>
     <div class="card-text p-1">@Model.PersonInfo.FirstName</div>
     <div class="card-text p-1">@Model.PersonInfo.LastName</div>

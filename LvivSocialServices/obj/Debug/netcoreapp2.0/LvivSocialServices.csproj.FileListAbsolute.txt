@@ -20,3 +20,14 @@ C:\Users\lenovo\Desktop\myFiles\StudingMaterials\programming\myPrograms\dotNet\A
 C:\Users\lenovo\Desktop\myFiles\StudingMaterials\programming\myPrograms\dotNet\ASP.NET MVC\LvivSocialServicesMine\LvivSocialServices\obj\Debug\netcoreapp2.0\LvivSocialServices.AssemblyInfo.cs
 C:\Users\lenovo\Desktop\myFiles\StudingMaterials\programming\myPrograms\dotNet\ASP.NET MVC\LvivSocialServicesMine\LvivSocialServices\obj\Debug\netcoreapp2.0\LvivSocialServices.dll
 C:\Users\lenovo\Desktop\myFiles\StudingMaterials\programming\myPrograms\dotNet\ASP.NET MVC\LvivSocialServicesMine\LvivSocialServices\obj\Debug\netcoreapp2.0\LvivSocialServices.pdb
+D:\Prog\dotNet\SecretProj\LvivSocialServices-master\LvivSocialServices\bin\Debug\netcoreapp2.0\LvivSocialServices.deps.json
+D:\Prog\dotNet\SecretProj\LvivSocialServices-master\LvivSocialServices\bin\Debug\netcoreapp2.0\LvivSocialServices.runtimeconfig.json
+D:\Prog\dotNet\SecretProj\LvivSocialServices-master\LvivSocialServices\bin\Debug\netcoreapp2.0\LvivSocialServices.runtimeconfig.dev.json
+D:\Prog\dotNet\SecretProj\LvivSocialServices-master\LvivSocialServices\bin\Debug\netcoreapp2.0\LvivSocialServices.dll
+D:\Prog\dotNet\SecretProj\LvivSocialServices-master\LvivSocialServices\bin\Debug\netcoreapp2.0\LvivSocialServices.pdb
+D:\Prog\dotNet\SecretProj\LvivSocialServices-master\LvivSocialServices\obj\Debug\netcoreapp2.0\LvivSocialServices.csprojResolveAssemblyReference.cache
+D:\Prog\dotNet\SecretProj\LvivSocialServices-master\LvivSocialServices\obj\Debug\netcoreapp2.0\LvivSocialServices.csproj.CoreCompileInputs.cache
+D:\Prog\dotNet\SecretProj\LvivSocialServices-master\LvivSocialServices\obj\Debug\netcoreapp2.0\LvivSocialServices.AssemblyInfoInputs.cache
+D:\Prog\dotNet\SecretProj\LvivSocialServices-master\LvivSocialServices\obj\Debug\netcoreapp2.0\LvivSocialServices.AssemblyInfo.cs
+D:\Prog\dotNet\SecretProj\LvivSocialServices-master\LvivSocialServices\obj\Debug\netcoreapp2.0\LvivSocialServices.dll
+D:\Prog\dotNet\SecretProj\LvivSocialServices-master\LvivSocialServices\obj\Debug\netcoreapp2.0\LvivSocialServices.pdb

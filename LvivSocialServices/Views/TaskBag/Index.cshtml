@@ -1,0 +1,33 @@
+﻿@model TaskBagIndexViewModel
+
+<h2>Your Task Bag</h2>
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Task</th>
+            <th>Time of creating</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var task in Model.TaskBag.Tasks)
+        {
+            <tr>
+                <td>
+                    <div class="card card-outline-primary m-1 p-1">
+                        <div class="card-text p-1">@task.Description </div> 
+                        <div class="card-text p-1">@task.PersonInfo.FirstName</div>
+                        <div class="card-text p-1">@task.PersonInfo.LastName</div>
+                        <div class="card-text p-1">@task.PersonInfo.Address</div>
+                      </div>
+                </td>
+                <td>
+                    @task.CreationDateTime.ToString()
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div class="text-center">
+    <a class="btn btn-primary" href="@Model.ReturnUrl">Back To Task Table</a>
+</div>
