@@ -11,8 +11,23 @@
             </span>
         </h4>
     </div>
-    <div class="card-text p-1">@Model.Description </div>
-    <div class="card-text p-1">@Model.PersonInfo.FirstName</div>
-    <div class="card-text p-1">@Model.PersonInfo.LastName</div>
-    <div class="card-text p-1">@Model.PersonInfo.Address</div>
+    <form id="@Model.TaskId" asp-action="Subscribe"
+          asp-controller="TaskBag" method="post">
+        <input type="hidden" name="taskId"
+               value="@Model.TaskId"/>
+        <input type="hidden" name="returnUrl"
+               value="@ViewContext.HttpContext.Request.PathAndQuery()" />
+        <span class="card-text p-1">
+            @Model.Description
+            <button type="submit"
+                    class="btn btn-success btn-sm pull-right" style="float:right">
+                Add To TaskBag
+            </button>
+        </span>
+        @*<div class="card-text p-1">@Model.Description </div>*@
+        <div class="card-text p-1">@Model.Person.FirstName</div>
+        <div class="card-text p-1">@Model.Person.LastName</div>
+        <div class="card-text p-1">@Model.Person.Address</div>
+        <div class="card-text p-1">@Model.Volunteer</div>
+    </form>
 </div>

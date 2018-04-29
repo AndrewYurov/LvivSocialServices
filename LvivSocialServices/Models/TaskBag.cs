@@ -10,7 +10,7 @@ namespace LvivSocialServices.Models
         {
             taskCollection.Add(task);
         }
-        public virtual void RemoveLine(Task task) => taskCollection.RemoveAll(t => t.TaskID == task.TaskID);
+        public virtual void RemoveItem(Task task) => taskCollection.RemoveAll(t => t.TaskId == task.TaskId);
 
         public virtual decimal ComputeTotalAmount() => taskCollection.Count;
         public virtual void Clear() => taskCollection.Clear();

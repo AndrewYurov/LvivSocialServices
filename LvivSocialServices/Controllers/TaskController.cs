@@ -2,6 +2,7 @@
 using LvivSocialServices.Models;
 using LvivSocialServices.Models.ViewModels;
 using System.Linq;
+using Microsoft.EntityFrameworkCore;
 
 namespace LvivSocialServices.Controllers
 {
@@ -19,10 +20,12 @@ namespace LvivSocialServices.Controllers
             => View(new TaskListViewModel
             {
                 Tasks = taskRepository.Tasks
+                        .Include(t => t.Person)
                         .Where(t => category == null || t.Category == category)
-                        .OrderBy(t => t.TaskID)
+                        .OrderBy(t => t.TaskId)
                         .Skip((taskPage - 1) * PageSize)
                         .Take(PageSize),
+
                 PagingInfo = new PagingInfo
                 {
                     CurrentPage = taskPage,
@@ -34,5 +37,7 @@ namespace LvivSocialServices.Controllers
                 },
                 CurrentCategory = category
             });
+
+
     }
 }
