@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using LvivSocialServices.Infrastructure;
 using LvivSocialServices.Models;
 using LvivSocialServices.Models.ViewModels;
+using Microsoft.EntityFrameworkCore;
 
 namespace LvivSocialServices.Controllers
 {
@@ -22,7 +23,7 @@ namespace LvivSocialServices.Controllers
 
         public RedirectToActionResult Subscribe(int taskId, string returnUrl)
         {
-            Task task = repository.Tasks.FirstOrDefault(t => t.TaskId == taskId);
+            Task task = repository.Tasks.Include(t => t.Person).FirstOrDefault(t => t.TaskId == taskId);
             if (task != null)
             {
                 task.Volunteer = "volunteer";

@@ -17,8 +17,7 @@ namespace LvivSocialServices.Controllers
         public ViewResult Index() => View(repository.Tasks.Include(t => t.Person));
 
         public ViewResult Edit(int taskId) => 
-            View( repository.Tasks.AsQueryable<Task>()
-                .FirstOrDefault(t => t.TaskId== taskId));
+            View( repository.Tasks.Include(t => t.Person).FirstOrDefault(t => t.TaskId== taskId));
 
         [HttpPost]
         public IActionResult Edit(Task task)
