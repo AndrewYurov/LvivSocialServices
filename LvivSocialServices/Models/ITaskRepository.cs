@@ -7,5 +7,7 @@ namespace LvivSocialServices.Models
         IQueryable<Task> Tasks { get; }
 
         void SaveTask(Task task);
+
+        Task DeleteTask(int taskId);
     }
 }

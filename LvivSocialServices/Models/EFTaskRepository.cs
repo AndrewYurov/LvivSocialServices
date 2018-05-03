@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace LvivSocialServices.Models
@@ -35,6 +36,17 @@ namespace LvivSocialServices.Models
                 }
             }
             context.SaveChanges();
+        }
+
+        public Task DeleteTask(int taskId)
+        {
+            Task dbEntry = context.Tasks.Include(t => t.Person).FirstOrDefault(t => t.TaskId == taskId);
+            if (dbEntry != null)
+            {
+                context.Tasks.Remove(dbEntry);
+                context.SaveChanges();
+            }
+            return dbEntry;
         }
     }
 }

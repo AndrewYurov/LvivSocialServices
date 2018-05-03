@@ -22,7 +22,7 @@ namespace LvivSocialServices.Controllers
         [HttpPost]
         public IActionResult Edit(Task task)
         {
-            if (task!=null)
+            if (ModelState.IsValid)
             {
                 repository.SaveTask(task);
                 TempData["message"] = "Task has been saved";
@@ -33,6 +33,19 @@ namespace LvivSocialServices.Controllers
                 // there is something wrong with the data values
                 return View(task);
             }
+        }
+
+        public ViewResult Create() => View("Edit", new Task());
+
+        [HttpPost]
+        public IActionResult Delete(int taskId)
+        {
+            Task deletedTask = repository.DeleteTask(taskId);
+            if ( deletedTask != null )
+            {
+                TempData["message"] = $"task with id {deletedTask.TaskId} was deleted";
+            }
+            return RedirectToAction("Index");
         }
 
     }

@@ -4,7 +4,7 @@ using System;
 
 namespace LvivSocialServices.Models
 {
-    public class FakeTaskRepository : ITaskRepository
+    public class FakeTaskRepository // : ITaskRepository
     {
         public IQueryable<Task> Tasks => new List<Task>{
             new Task
